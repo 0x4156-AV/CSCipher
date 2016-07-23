@@ -12,13 +12,10 @@ e.pack()
 e.focus_set()
 
 def callback():
-    string e.get()
+    string = e.get()
+    caesar(string)
 
 b = Button(app, text="Start", width=100, command=callback)
 b.pack()
 
 app.mainloop()
-
-#flagFormat = input("How are flags formatted for this CTF? (ex. flag{}) ")
-#string="wcrx{alczlj_trvjri}"
-#caesar(string)
