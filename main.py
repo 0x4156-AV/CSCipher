@@ -6,8 +6,15 @@ app = Tkinter.Tk()
 app.title("CSCipher")
 app.geometry("650x500+200+200")
 
-custName = stringVar(None) 
-yourname = Entry(app, textvariable=custName).pack()
+e = Entry(app)
+e.pack()
+e.focus_set()
+
+def callback():
+    print e.get()
+
+b = Button(app, text="Start", width=10, command=callback)
+b.pack()
 
 app.mainloop()
 
