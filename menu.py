@@ -3,7 +3,7 @@ from Tkinter import *
 import tkMessageBox
 
 def makeMenuBar():    
-    # Setup menu bar
+	# Setup menu bar
 	def Open():
 	    print "Still in dev"
 	def Save():
@@ -11,10 +11,15 @@ def makeMenuBar():
 	def About():
 	    print "Still in dev"
 	
+	# Make variables global
 	global menubar
+	global app
+	global filemenu
+	global editmenu
+	global helpmenu
+	
 	menubar = Menu(app)
 	
-	global filemenu
 	filemenu = Menu(menubar, tearoff=0)
 	filemenu.add_command(label="Open", command=Open)
 	filemenu.add_command(label="Save", command=Save)
@@ -22,14 +27,12 @@ def makeMenuBar():
 	filemenu.add_command(label="Exit", command=app.quit)
 	menubar.add_cascade(label="File", menu=filemenu)
 	
-	global editmenu
 	editmenu = Menu(menubar, tearoff=0)
 	editmenu.add_command(label="Cut", command=lambda: app.focus_get().event_generate('<<Cut>>'))
 	editmenu.add_command(label="Copy", command=lambda: app.focus_get().event_generate('<<Copy>>'))
 	editmenu.add_command(label="Paste", command=lambda: app.focus_get().event_generate('<<Paste>>'))
 	menubar.add_cascade(label="Edit", menu=editmenu)
 
-	global helpmenu
 	helpmenu = Menu(menubar, tearoff=0)
 	helpmenu.add_command(label="About", command=About)
 	menubar.add_cascade(label="Help", menu=helpmenu)
