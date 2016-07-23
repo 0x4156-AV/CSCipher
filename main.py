@@ -2,6 +2,7 @@ import sys, os
 import Tkinter
 from caesar import caesar
 from Tkinter import *
+import tkMessageBox
 
 # Setup application interface
 app = Tkinter.Tk()
