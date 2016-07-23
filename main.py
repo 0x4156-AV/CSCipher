@@ -8,35 +8,34 @@ app = Tkinter.Tk()
 app.title("CSCipher")
 app.geometry("660x500+200+200")
 
-# Create the menu bar
+# Setup menu bar
 def Open():
-    print "Still in dev"
+    print "hello!"
 def Save():
-    print "Still in dev"
+    print "hello!"
 def About():
-    print "Still in dev"
-	
+    print "hello!"
+    
 menubar = Menu(app)
-	
+
 filemenu = Menu(menubar, tearoff=0)
-filemenu.add_command(label="Open", command=Open)
-filemenu.add_command(label="Save", command=Save)
+filemenu.add_command(label="Open", accelerator="Ctrl+O", command=Open)
+filemenu.add_command(label="Save", accelerator="Ctrl+S", command=Save)
 filemenu.add_separator()
-filemenu.add_command(label="Exit", command=app.quit)
+filemenu.add_command(label="Exit", accelerator="Ctrl+Q", command=app.quit)
 menubar.add_cascade(label="File", menu=filemenu)
-	
+
 editmenu = Menu(menubar, tearoff=0)
-editmenu.add_command(label="Cut", command=lambda: app.focus_get().event_generate('<<Cut>>'))
-editmenu.add_command(label="Copy", command=lambda: app.focus_get().event_generate('<<Copy>>'))
-editmenu.add_command(label="Paste", command=lambda: app.focus_get().event_generate('<<Paste>>'))
+editmenu.add_command(label="Cut", accelerator="Ctrl+X", command=lambda: mywindow.focus_get().event_generate('<<Cut>>'))
+editmenu.add_command(label="Copy", accelerator="Ctrl+C", command=lambda: mywindow.focus_get().event_generate('<<Copy>>'))
+editmenu.add_command(label="Paste", accelerator="Ctrl+V", command=lambda: mywindow.focus_get().event_generate('<<Paste>>'))
 menubar.add_cascade(label="Edit", menu=editmenu)
 
 helpmenu = Menu(menubar, tearoff=0)
 helpmenu.add_command(label="About", command=About)
-menubar.add_cascade(label="Help", menu=helpmenu)
-	
-app.config(menu=menubar)
+menubar.add_cascade(label="Help", accelerator="Ctrl+H", menu=helpmenu)
 
+app.config(menu=menubar)
 
 # Create the funtions to call from the GUI
 def callback():
@@ -49,12 +48,12 @@ def beenClicked():
     cipherType = relStatus.get()
 
 def determineMethod():
-    global string
     global cipherType
+    global string
     try:
         if cipherType == "Caesar":
             caesarDecoded = getCaesarResult(string)
-            caesarKey = getCaesarKey(string)
+            caesarKey = getCaesarKey(String)
         elif cipherType == "Vigenere":
             tkMessageBox.showinfo("Vigenere","Vigenere")
         elif cipherType == "Baconian":
@@ -75,9 +74,10 @@ def determineMethod():
             tkMessageBox.showinfo("Auto","Auto")
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
+    except NameError as noBoxSelected:
+        tkMessageBox.showinfo("Error", "You must select a type of cipher")
     except ZeroDivisionError as noTextEntered:
         tkMessageBox.showinfo("Error", "You must enter something into the text box")
-
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
