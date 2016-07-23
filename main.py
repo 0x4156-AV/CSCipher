@@ -76,6 +76,8 @@ def determineMethod():
             tkMessageBox.showinfo("Auto","Auto")
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
+    except NameError as unknown:
+    	tkMessageBox.showinfo("Error", unknown)
     except ZeroDivisionError as noTextEntered:
         tkMessageBox.showinfo("Error", "You must enter something into the text box")
 
