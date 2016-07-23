@@ -7,7 +7,7 @@ app = Tkinter.Tk()
 app.title("CSCipher")
 app.geometry("650x500+200+200")
 
-e = Entry(app)
+e = Entry(app, width=100)
 e.pack()
 e.focus_set()
 
@@ -15,7 +15,7 @@ def callback():
     string = e.get()
     caesar(string)
 
-b = Button(app, text="Start", width=100, command=callback)
+b = Button(app, text="Start", width=10, command=callback)
 b.pack()
 
 app.mainloop()
