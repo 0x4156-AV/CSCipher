@@ -5,6 +5,7 @@ from Tkinter import *
 import tkMessageBox
 
 # Setup application interface
+global app
 app = Tkinter.Tk()
 app.title("CSCipher")
 app.geometry("660x500+200+200")
