@@ -10,7 +10,7 @@ app.geometry("650x500+200+200")
 
 # Create the funtions to call from the GUI
 def callback():
-    string = textEntry.get()
+    string = labelText.get()
     caesar(string)
 
 # Make and put the buttons on a grid on the window
