@@ -26,9 +26,9 @@ filemenu.add_command(label="Exit", accelerator="Ctrl+Q", command=app.quit)
 menubar.add_cascade(label="File", menu=filemenu)
 
 editmenu = Menu(menubar, tearoff=0)
-editmenu.add_command(label="Cut", accelerator="Ctrl+X", command=lambda: mywindow.focus_get().event_generate('<<Cut>>'))
-editmenu.add_command(label="Copy", accelerator="Ctrl+C", command=lambda: mywindow.focus_get().event_generate('<<Copy>>'))
-editmenu.add_command(label="Paste", accelerator="Ctrl+V", command=lambda: mywindow.focus_get().event_generate('<<Paste>>'))
+editmenu.add_command(label="Cut", accelerator="Ctrl+X", command=lambda: app.focus_get().event_generate('<<Cut>>'))
+editmenu.add_command(label="Copy", accelerator="Ctrl+C", command=lambda: app.focus_get().event_generate('<<Copy>>'))
+editmenu.add_command(label="Paste", accelerator="Ctrl+V", command=lambda: app.focus_get().event_generate('<<Paste>>'))
 menubar.add_cascade(label="Edit", menu=editmenu)
 
 helpmenu = Menu(menubar, tearoff=0)
