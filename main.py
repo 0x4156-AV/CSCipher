@@ -7,7 +7,7 @@ app = Tkinter.Tk()
 app.title("CSCipher")
 app.geometry("650x500+200+200")
 
-e = Entry(app, width=100)
+e = Entry(app, width=100, wrap=WORD)
 e.pack()
 e.focus_set()
 
