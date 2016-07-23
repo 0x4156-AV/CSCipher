@@ -54,7 +54,7 @@ def determineMethod():
     try:
         if cipherType == "Caesar":
             caesarDecoded = getCaesarResult(string)
-            caesarKey = getCaesarKey(String)
+            caesarKey = getCaesarKey(string)
         elif cipherType == "Vigenere":
             tkMessageBox.showinfo("Vigenere","Vigenere")
         elif cipherType == "Baconian":
