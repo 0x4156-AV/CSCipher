@@ -106,6 +106,6 @@ Radiobutton(app, text="Auto", value="Auto", variable=relStatus, command=beenClic
 text = Text(app)
 text.insert(INSERT, "---------------------------------------------------------")
 text.config(state=DISABLED)
-text.grid(row=3,columnspan=4)
+text.grid(row=3,columnspan=4, padx=5)
 # Start the application
 app.mainloop()
