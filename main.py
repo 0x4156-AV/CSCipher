@@ -11,12 +11,32 @@ app.geometry("650x500+200+200")
 # Create the funtions to call from the GUI
 def callback():
     string = labelText.get()
-    tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
+    determineMethod()
 
 def beenClicked():
     cipherType = relStatus.get()
-    print cipherType
 
+def determineMethod():
+    if cipherType is "Caesar":
+        tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
+    else if cipherType is "Vigenere":
+        tkMessageBox.showinfo("Vigenere","Vigenere")
+    else if cipherType is "Baconian":
+        tkMessageBox.showinfo("Baconian","Baconian")
+    else if cipherType is "Affine":
+        tkMessageBox.showinfo("Affine","Affine")
+    else if cipherType is "ROT 13":
+        tkMessageBox.showinfo("ROT 13","ROT 13")
+    else if cipherType is "Binary":
+        tkMessageBox.showinfo("Binary","Binary")
+    else if cipherType is "Atbash":
+        tkMessageBox.showinfo("Atbash","Atbash")
+    else if cipherType is "Base 64":
+        tkMessageBox.showinfo("Base 64","Base 64")
+    else if cipherType is "Morse":
+        tkMessageBox.showinfo("Morse","Morse")
+    else if cipherType is "Auto":
+        tkMessageBox.showinfo("Auto","Auto")
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
