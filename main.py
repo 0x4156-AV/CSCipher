@@ -10,6 +10,7 @@ app.geometry("650x500+200+200")
 
 # Create the funtions to call from the GUI
 def callback():
+    global string
     string = labelText.get()
     determineMethod()
 
@@ -19,6 +20,7 @@ def beenClicked():
 
 def determineMethod():
     global cipherType
+    global string
     try:
         if cipherType == "Caesar":
             tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
