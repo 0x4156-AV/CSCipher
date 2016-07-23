@@ -1,3 +1,3 @@
-from modules.caesar import caesar
+from caesar import caesar
 string="from file import function"
 caesar(string)
