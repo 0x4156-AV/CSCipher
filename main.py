@@ -52,7 +52,7 @@ def determineMethod():
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
 textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=1, columnspan=4, padx=2, pady=2)
-submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1, column=4)
+submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1, column=4, padx=2, pady=8)
 
 # Then put down the options for what cipher to use
 relStatus = StringVar()
