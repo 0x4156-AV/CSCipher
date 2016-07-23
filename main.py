@@ -16,7 +16,7 @@ def callback():
 
 def beenClicked():
     cipherType = relStatus.get()
-    print ciphertype
+    print cipherType
 
 # Make and put the buttons on a grid on the window
 labelText = StringVar(None)
