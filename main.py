@@ -104,7 +104,7 @@ Radiobutton(app, text="Base 64", value="Base 64", variable=relStatus, command=be
 Radiobutton(app, text="Morse", value="Morse", variable=relStatus, command=beenClicked).grid(row=2, column=3)
 Radiobutton(app, text="Auto", value="Auto", variable=relStatus, command=beenClicked).grid(row=2, column=4)
 text = Text(app)
-text.insert(INSERT, "------------------------------------------------------------------------------------------------------------------")
+text.insert(INSERT, "-----------------------------------------------------------------")
 text.config(state=DISABLED)
 text.grid(row=3,columnspan=6, padx=5)
 # Start the application
