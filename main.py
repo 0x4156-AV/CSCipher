@@ -1,5 +1,6 @@
 import sys, os, Tkinter
-from caesar import getCaesarResult, getCaesarKey
+from caesar import *
+from menu import *
 from Tkinter import *
 import tkMessageBox
 
