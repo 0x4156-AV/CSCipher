@@ -75,11 +75,11 @@ def determineMethod():
             tkMessageBox.showinfo("Auto","Auto")
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
-    #except NameError as noBoxSelected:
-        #global cipherType
-        #tkMessageBox.showinfo("Error", "You must select a type of cipher")
-        #print noBoxSelected
-        #print "Ciphertext: " + str(cipherType)
+    except NameError as noBoxSelected:
+        global cipherType
+        tkMessageBox.showinfo("Error", "You must select a type of cipher")
+        print noBoxSelected
+        print "Ciphertext: " + str(cipherType)
     except ZeroDivisionError as noTextEntered:
         tkMessageBox.showinfo("Error", "You must enter something into the text box")
 
