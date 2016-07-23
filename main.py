@@ -47,8 +47,10 @@ def callback():
 def beenClicked():
     global cipherType
     cipherType = relStatus.get()
-    if cipherType == "Morse":
-    	tkMessageBox.showinfo("About Morse","Baconian")
+    if cipherType == "Caesar" or cipherType == "Vigenere" or cipherType == "Baconian" or cipherType == "ROT13" or cipherType == "Binary" or cipherType == "Base 64" or cipherType == "Atbash":
+	labelText = StringVar(None)
+	textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=4, columnspan=4, padx=5, pady=5)
+	submitButton = Button(app, text="Start", width=10, command=callback).grid(row=4, column=4, pady=5)
 
 def determineMethod():
     global string
@@ -83,13 +85,7 @@ def determineMethod():
     except ZeroDivisionError as noTextEntered:
         tkMessageBox.showinfo("Error", "You must enter something into the text box")
 
-# Make and put the buttons on a grid on the window
-# Start with the textBox and Submit Button
-labelText = StringVar(None)
-textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=4, columnspan=4, padx=5, pady=5)
-submitButton = Button(app, text="Start", width=10, command=callback).grid(row=4, column=4, pady=5)
-
-# Then put down the options for what cipher to use
+# Put down the options for what cipher to use
 relStatus = StringVar()
 relStatus.set("RandomCrap")
 Radiobutton(app, text="Caesar", value="Caesar", variable=relStatus, command=beenClicked).grid(row=1, column=0, padx=5, pady=5)
