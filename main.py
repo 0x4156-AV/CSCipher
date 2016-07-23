@@ -50,9 +50,9 @@ def beenClicked():
 
 def determineMethod():
     global string
-    global cipherType
     try:
-        if cipherType == "Caesar":
+    	global cipherType
+        if cipherType == "Caesar" || cipherType == "":
             caesarDecoded = getCaesarResult(string)
             caesarKey = getCaesarKey(string)
         elif cipherType == "Vigenere":
@@ -75,10 +75,6 @@ def determineMethod():
             tkMessageBox.showinfo("Auto","Auto")
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
-    except NameError as noBoxSelected:
-    	global cipherType
-        cipherType == "Caesar"
-        determineMethod()
     except ZeroDivisionError as noTextEntered:
         tkMessageBox.showinfo("Error", "You must enter something into the text box")
 
