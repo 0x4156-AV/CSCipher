@@ -6,7 +6,7 @@ import tkMessageBox
 # Setup application interface
 app = Tkinter.Tk()
 app.title("CSCipher")
-app.geometry("700x500+200+200")
+app.geometry("690x500+200+200")
 
 # Create the menu bar
 def Open():
