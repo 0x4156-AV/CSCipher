@@ -12,13 +12,13 @@ app.geometry("660x500+200+200")
 def hello():
     print "hello!"
 
-menubar = Menu(root)
+menubar = Menu(app)
 
 filemenu = Menu(menubar, tearoff=0)
 filemenu.add_command(label="Open", command=hello)
 filemenu.add_command(label="Save", command=hello)
 filemenu.add_separator()
-filemenu.add_command(label="Exit", command=root.quit)
+filemenu.add_command(label="Exit", command=app.quit)
 menubar.add_cascade(label="File", menu=filemenu)
 
 editmenu = Menu(menubar, tearoff=0)
@@ -31,7 +31,7 @@ helpmenu = Menu(menubar, tearoff=0)
 helpmenu.add_command(label="About", command=hello)
 menubar.add_cascade(label="Help", menu=helpmenu)
 
-root.config(menu=menubar)
+app.config(menu=menubar)
 
 # Create the funtions to call from the GUI
 def callback():
