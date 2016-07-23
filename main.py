@@ -13,14 +13,14 @@ def Open():
     print "hello!"
 def Save():
     print "hello!"
-def Save():
+def About():
     print "hello!"
     
 menubar = Menu(app)
 
 filemenu = Menu(menubar, tearoff=0)
-filemenu.add_command(label="Open", accelerator="Ctrl+O", command=hello)
-filemenu.add_command(label="Save", accelerator="Ctrl+S", command=hello)
+filemenu.add_command(label="Open", accelerator="Ctrl+O", command=Open)
+filemenu.add_command(label="Save", accelerator="Ctrl+S", command=Save)
 filemenu.add_separator()
 filemenu.add_command(label="Exit", accelerator="Ctrl+Q", command=app.quit)
 menubar.add_cascade(label="File", menu=filemenu)
@@ -32,7 +32,7 @@ editmenu.add_command(label="Paste", accelerator="Ctrl+V", command=lambda: mywind
 menubar.add_cascade(label="Edit", menu=editmenu)
 
 helpmenu = Menu(menubar, tearoff=0)
-helpmenu.add_command(label="About", command=hello)
+helpmenu.add_command(label="About", command=About)
 menubar.add_cascade(label="Help", accelerator="Ctrl+H", menu=helpmenu)
 
 app.config(menu=menubar)
