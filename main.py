@@ -45,7 +45,6 @@ def callback():
     determineMethod()
 
 def beenClicked():
-    global cipherType
     cipherType = relStatus.get()
 
 def determineMethod():
