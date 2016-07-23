@@ -23,7 +23,7 @@ def determineMethod():
     global string
     try:
         if cipherType == "Caesar":
-            tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
+            caesar(string)
         elif cipherType == "Vigenere":
             tkMessageBox.showinfo("Vigenere","Vigenere")
         elif cipherType == "Baconian":
