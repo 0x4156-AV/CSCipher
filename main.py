@@ -15,8 +15,8 @@ def callback():
 
 # Make and put the buttons on a grid on the window
 labelText = StringVar(None)
-textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText, padx=2).grid(row=1, column=1)
-submitButton = Button(app, text="Start", width=10, command=callback, padx=2).grid(row=1, column=2)
+textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText, ipadx=2).grid(row=1, column=1)
+submitButton = Button(app, text="Start", width=10, command=callback, ipadx=2).grid(row=1, column=2)
 
 # Start the application
 app.mainloop()
