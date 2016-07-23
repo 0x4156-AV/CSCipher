@@ -32,4 +32,5 @@ def decrypt(n, ciphertext):
 def caesar(string):
 	key = str(find_key(string))
 	decrypted = str(decrypt(find_key(string), string.upper()))
-	return "Used key: " + key + "\n" + decrypted
+	textToDisplay = "Used key: " + key + "\n" + decrypted
+	return textToDisplay
