@@ -6,7 +6,7 @@ import tkMessageBox
 # Setup application interface
 app = Tkinter.Tk()
 app.title("CSCipher")
-app.geometry("657x500+200+200")
+app.geometry("660x500+200+200")
 
 # Create the funtions to call from the GUI
 def callback():
