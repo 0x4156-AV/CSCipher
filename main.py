@@ -1,6 +1,7 @@
 import sys, os
 import Tkinter
 from caesar import caesar
+from Tkinter import Entry
 
 app = Tkinter.Tk()
 app.title("CSCipher")
