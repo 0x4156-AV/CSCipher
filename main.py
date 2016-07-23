@@ -52,7 +52,7 @@ def determineMethod():
     global string
     global cipherType
     try:
-        if cipherType == "Caesar" or cipherType == "":
+        if cipherType == "Caesar":
             caesarDecoded = getCaesarResult(string)
             caesarKey = getCaesarKey(string)
         elif cipherType == "Vigenere":
