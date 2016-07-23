@@ -19,21 +19,21 @@ def About():
 menubar = Menu(app)
 
 filemenu = Menu(menubar, tearoff=0)
-filemenu.add_command(label="Open", accelerator="Ctrl+O", command=Open)
-filemenu.add_command(label="Save", accelerator="Ctrl+S", command=Save)
+filemenu.add_command(label="Open", command=Open)
+filemenu.add_command(label="Save", command=Save)
 filemenu.add_separator()
-filemenu.add_command(label="Exit", accelerator="Ctrl+Q", command=app.quit)
+filemenu.add_command(label="Exit", command=app.quit)
 menubar.add_cascade(label="File", menu=filemenu)
 
 editmenu = Menu(menubar, tearoff=0)
-editmenu.add_command(label="Cut", accelerator="Ctrl+X", command=lambda: app.focus_get().event_generate('<<Cut>>'))
-editmenu.add_command(label="Copy", accelerator="Ctrl+C", command=lambda: app.focus_get().event_generate('<<Copy>>'))
-editmenu.add_command(label="Paste", accelerator="Ctrl+V", command=lambda: app.focus_get().event_generate('<<Paste>>'))
+editmenu.add_command(label="Cut", command=lambda: app.focus_get().event_generate('<<Cut>>'))
+editmenu.add_command(label="Copy", command=lambda: app.focus_get().event_generate('<<Copy>>'))
+editmenu.add_command(label="Paste", command=lambda: app.focus_get().event_generate('<<Paste>>'))
 menubar.add_cascade(label="Edit", menu=editmenu)
 
 helpmenu = Menu(menubar, tearoff=0)
 helpmenu.add_command(label="About", command=About)
-menubar.add_cascade(label="Help", accelerator="Ctrl+H", menu=helpmenu)
+menubar.add_cascade(label="Help", menu=helpmenu)
 
 app.config(menu=menubar)
 
