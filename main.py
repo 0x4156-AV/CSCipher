@@ -19,24 +19,26 @@ def beenClicked():
 def determineMethod():
     if cipherType is "Caesar":
         tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
-    else if cipherType is "Vigenere":
+    elif cipherType is "Vigenere":
         tkMessageBox.showinfo("Vigenere","Vigenere")
-    else if cipherType is "Baconian":
+    elif cipherType is "Baconian":
         tkMessageBox.showinfo("Baconian","Baconian")
-    else if cipherType is "Affine":
+    elif cipherType is "Affine":
         tkMessageBox.showinfo("Affine","Affine")
-    else if cipherType is "ROT 13":
+    elif cipherType is "ROT 13":
         tkMessageBox.showinfo("ROT 13","ROT 13")
-    else if cipherType is "Binary":
+    elif cipherType is "Binary":
         tkMessageBox.showinfo("Binary","Binary")
-    else if cipherType is "Atbash":
+    elif cipherType is "Atbash":
         tkMessageBox.showinfo("Atbash","Atbash")
-    else if cipherType is "Base 64":
+    elif cipherType is "Base 64":
         tkMessageBox.showinfo("Base 64","Base 64")
-    else if cipherType is "Morse":
+    elif cipherType is "Morse":
         tkMessageBox.showinfo("Morse","Morse")
-    else if cipherType is "Auto":
+    elif cipherType is "Auto":
         tkMessageBox.showinfo("Auto","Auto")
+    else:
+        tkMessageBox.showinfo("You broke it and idk how","You broke it and idk how")
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
