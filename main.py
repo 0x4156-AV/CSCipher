@@ -78,7 +78,7 @@ def determineMethod():
     except NameError as noBoxSelected:
         tkMessageBox.showinfo("Error", "You must select a type of cipher")
         print noBoxSelected
-        print "Ciphertext: " + str(cipherType)
+        #print "Ciphertext: " + str(cipherType)
     except ZeroDivisionError as noTextEntered:
         tkMessageBox.showinfo("Error", "You must enter something into the text box")
 
