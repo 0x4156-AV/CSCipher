@@ -14,9 +14,11 @@ def callback():
     determineMethod()
 
 def beenClicked():
+    global cipherType
     cipherType = relStatus.get()
 
 def determineMethod():
+    global cipherType
     if cipherType is "Caesar":
         tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
     elif cipherType is "Vigenere":
