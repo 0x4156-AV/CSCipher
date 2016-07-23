@@ -20,25 +20,25 @@ def beenClicked():
 def determineMethod():
     global cipherType
     try:
-        if cipherType is "Caesar":
+        if cipherType == "Caesar":
             tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
-        elif cipherType is "Vigenere":
+        elif cipherType == "Vigenere":
             tkMessageBox.showinfo("Vigenere","Vigenere")
-        elif cipherType is "Baconian":
+        elif cipherType == "Baconian":
             tkMessageBox.showinfo("Baconian","Baconian")
-        elif cipherType is "Affine":
+        elif cipherType == "Affine":
             tkMessageBox.showinfo("Affine","Affine")
-        elif cipherType is "ROT 13":
+        elif cipherType == "ROT 13":
             tkMessageBox.showinfo("ROT 13","ROT 13")
-        elif cipherType is "Binary":
+        elif cipherType == "Binary":
             tkMessageBox.showinfo("Binary","Binary")
-        elif cipherType is "Atbash":
+        elif cipherType == "Atbash":
             tkMessageBox.showinfo("Atbash","Atbash")
-        elif cipherType is "Base 64":
+        elif cipherType == "Base 64":
             tkMessageBox.showinfo("Base 64","Base 64")
-        elif cipherType is "Morse":
+        elif cipherType == "Morse":
             tkMessageBox.showinfo("Morse","Morse")
-        elif cipherType is "Auto":
+        elif cipherType == "Auto":
             tkMessageBox.showinfo("Auto","Auto")
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
