@@ -14,7 +14,7 @@ def callback():
     caesar(string)
 
 # Make and put the buttons on a grid on the window
-custName = StringVar().set(None)
+labelText = StringVar().set("")
 textEntry = Entry(app, width=57, justify=CENTER, textvariable=custName).grid(row=1, column=1)
 submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1, column=2)
 
