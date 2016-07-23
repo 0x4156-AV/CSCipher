@@ -34,5 +34,4 @@ def makeMenuBar():
 	helpmenu.add_command(label="About", command=About)
 	menubar.add_cascade(label="Help", menu=helpmenu)
 	
-	global app
 	app.config(menu=menubar)
