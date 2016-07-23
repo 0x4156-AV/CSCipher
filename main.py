@@ -10,11 +10,11 @@ app.geometry("660x500+200+200")
 
 # Setup menu bar
 def Open():
-    print "hello!"
+    print "Still in dev"
 def Save():
-    print "hello!"
+    print "Still in dev"
 def About():
-    print "hello!"
+    print "Still in dev"
     
 menubar = Menu(app)
 
