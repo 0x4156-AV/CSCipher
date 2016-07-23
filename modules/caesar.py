@@ -1,7 +1,8 @@
+
 import collections
 from string import ascii_lowercase
 
-def find_key():
+def find_key(string):
     number = len(string)
     array = []
 
@@ -30,8 +31,6 @@ def decrypt(n, ciphertext):
     return result
 
 def caesar(string):
-	key = str(find_key())
-	decrypted = str(decrypt(key, string.lower()))
+	key = str(find_key(string))
+	decrypted = str(decrypt(find_key(string), string.upper()))
 	print "Used key: " + key + "\n" + decrypted
-	
-caesar()
