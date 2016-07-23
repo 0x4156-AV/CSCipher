@@ -86,8 +86,8 @@ def determineMethod():
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
-textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=3, columnspan=4, padx=5, pady=5)
-submitButton = Button(app, text="Start", width=10, command=callback).grid(row=3, column=4, pady=5)
+textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=4, columnspan=4, padx=5, pady=5)
+submitButton = Button(app, text="Start", width=10, command=callback).grid(row=4, column=4, pady=5)
 
 # Then put down the options for what cipher to use
 relStatus = StringVar()
@@ -104,6 +104,6 @@ Radiobutton(app, text="Base 64", value="Base 64", variable=relStatus, command=be
 Radiobutton(app, text="Morse", value="Morse", variable=relStatus, command=beenClicked).grid(row=2, column=3)
 Radiobutton(app, text="Auto", value="Auto", variable=relStatus, command=beenClicked).grid(row=2, column=4)
 text = Text(app)
-text.insert(INSERT, "---------------------------------------------------------")
+text.insert(INSERT, "---------------------------------------------------------").grid(row=3,columnspan=4)
 # Start the application
 app.mainloop()
