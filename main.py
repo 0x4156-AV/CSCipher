@@ -47,6 +47,8 @@ def callback():
 def beenClicked():
     global cipherType
     cipherType = relStatus.get()
+    if cipherType == "Morse":
+    	tkMessageBox.showinfo("About Morse","Baconian")
 
 def determineMethod():
     global string
@@ -84,23 +86,23 @@ def determineMethod():
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
-textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=1, columnspan=4, padx=5, pady=5)
-submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1, column=4, pady=5)
+textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=3, columnspan=4, padx=5, pady=5)
+submitButton = Button(app, text="Start", width=10, command=callback).grid(row=3, column=4, pady=5)
 
 # Then put down the options for what cipher to use
 relStatus = StringVar()
 relStatus.set("RandomCrap")
-Radiobutton(app, text="Caesar", value="Caesar", variable=relStatus, command=beenClicked).grid(row=2, column=0)
-Radiobutton(app, text="Vigenere", value="Vigenere", variable=relStatus, command=beenClicked).grid(row=2, column=1)
-Radiobutton(app, text="Baconian", value="Baconian", variable=relStatus, command=beenClicked).grid(row=2, column=2)
-Radiobutton(app, text="Affine", value="Affine", variable=relStatus, command=beenClicked).grid(row=2, column=3)
-Radiobutton(app, text="ROT13", value="ROT13", variable=relStatus, command=beenClicked).grid(row=2, column=4)
+Radiobutton(app, text="Caesar", value="Caesar", variable=relStatus, command=beenClicked).grid(row=1, column=0)
+Radiobutton(app, text="Vigenere", value="Vigenere", variable=relStatus, command=beenClicked).grid(row=1, column=1)
+Radiobutton(app, text="Baconian", value="Baconian", variable=relStatus, command=beenClicked).grid(row=1, column=2)
+Radiobutton(app, text="Affine", value="Affine", variable=relStatus, command=beenClicked).grid(row=1, column=3)
+Radiobutton(app, text="ROT13", value="ROT13", variable=relStatus, command=beenClicked).grid(row=1, column=4)
 
-Radiobutton(app, text="Binary", value="Binary", variable=relStatus, command=beenClicked).grid(row=3, column=0)
-Radiobutton(app, text="Atbash", value="Atbash", variable=relStatus, command=beenClicked).grid(row=3, column=1)
-Radiobutton(app, text="Base 64", value="Base 64", variable=relStatus, command=beenClicked).grid(row=3, column=2)
-Radiobutton(app, text="Morse", value="Morse", variable=relStatus, command=beenClicked).grid(row=3, column=3)
-Radiobutton(app, text="Auto", value="Auto", variable=relStatus, command=beenClicked).grid(row=3, column=4)
+Radiobutton(app, text="Binary", value="Binary", variable=relStatus, command=beenClicked).grid(row=2, column=0)
+Radiobutton(app, text="Atbash", value="Atbash", variable=relStatus, command=beenClicked).grid(row=2, column=1)
+Radiobutton(app, text="Base 64", value="Base 64", variable=relStatus, command=beenClicked).grid(row=2, column=2)
+Radiobutton(app, text="Morse", value="Morse", variable=relStatus, command=beenClicked).grid(row=2, column=3)
+Radiobutton(app, text="Auto", value="Auto", variable=relStatus, command=beenClicked).grid(row=2, column=4)
 
 # Start the application
 app.mainloop()
