@@ -23,7 +23,7 @@ textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(ro
 submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1, column=2)
 relStatus = StringVar().set(None)
 radiobutton = RadioButton(app, text="Caesar", value="Caesar", variable=relStatus, command=beenClicked).grid(row=2, column=1)
-radiobutton = RadioButton(app, text="Vigenére", value="Vigenére", variable=relStatus, command=beenClicked).grid(row=2, column=2)
+radiobutton = RadioButton(app, text="Vigenere", value="Vigenere", variable=relStatus, command=beenClicked).grid(row=2, column=2)
 radiobutton = RadioButton(app, text="Baconian", value="Baconian", variable=relStatus, command=beenClicked).grid(row=2, column=3)
 radiobutton = RadioButton(app, text="Morse", value="Morse", variable=relStatus, command=beenClicked).grid(row=2, column=4)
 radiobutton = RadioButton(app, text="Auto", value="Auto", variable=relStatus, command=beenClicked).grid(row=2, column=5)
