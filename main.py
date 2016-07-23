@@ -15,7 +15,7 @@ def callback():
     tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
 
 def beenClicked():
-    
+    print "Been CLicked Called"
 
 # Make and put the buttons on a grid on the window
 labelText = StringVar(None)
