@@ -31,6 +31,7 @@ def decrypt(n, ciphertext):
 
 def caesar(string):
 	key = str(find_key())
-	decrypted = str(caesar_decrypt(find_key(), string.lower()))
+	decrypted = str(decrypt(key, string.lower()))
 	print "Used key: " + key + "\n" + decrypted
 	
+caesar()
