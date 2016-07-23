@@ -1,5 +1,5 @@
 import sys, os, Tkinter
-from caesar import caesar
+from caesar import getCaesarResult, getCaesarKey
 from Tkinter import *
 import tkMessageBox
 
@@ -48,7 +48,7 @@ def determineMethod():
     global string
     try:
         if cipherType == "Caesar":
-            caesarDecoded = getCaesarDecoded(string)
+            caesarDecoded = getCaesarResult(string)
             caesarKey = getCaesarKey(String)
         elif cipherType == "Vigenere":
             tkMessageBox.showinfo("Vigenere","Vigenere")
