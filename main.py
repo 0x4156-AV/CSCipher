@@ -1,6 +1,5 @@
 import sys, os
-from tkinter import *
-import tkinter.messagebox
+import Tkinter
 from caesar import caesar
 
 app = TK()
