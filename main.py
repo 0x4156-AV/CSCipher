@@ -12,7 +12,7 @@ app.geometry("650x500+200+200")
 # Create the funtions to call from the GUI
 def callback():
     string = labelText.get()
-    tkMessageBox.showinfo(caesar(string))
+    tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
 
 # Make and put the buttons on a grid on the window
 labelText = StringVar(None)
