@@ -44,9 +44,10 @@ def determineMethod():
             tkMessageBox.showinfo("Auto","Auto")
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
-    except NameError as e:
+    except NameError as noBoxSelected:
         tkMessageBox.showinfo("Error", "You must select a type of cipher")
-        print e
+    except ZeroDivisionError as noTextEntered:
+        tkMessageBox.showinfo("Error", "You must enter something into the text box")
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
