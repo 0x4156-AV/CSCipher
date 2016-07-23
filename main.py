@@ -103,6 +103,7 @@ Radiobutton(app, text="Atbash", value="Atbash", variable=relStatus, command=been
 Radiobutton(app, text="Base 64", value="Base 64", variable=relStatus, command=beenClicked).grid(row=2, column=2)
 Radiobutton(app, text="Morse", value="Morse", variable=relStatus, command=beenClicked).grid(row=2, column=3)
 Radiobutton(app, text="Auto", value="Auto", variable=relStatus, command=beenClicked).grid(row=2, column=4)
-app.insert(END, "hello, world").grid(row=4, columnspan=4)
+text = Text(app)
+text.insert(INSERT, "---------------------------------------------------------")
 # Start the application
 app.mainloop()
