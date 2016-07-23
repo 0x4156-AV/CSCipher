@@ -50,8 +50,8 @@ def beenClicked():
 
 def determineMethod():
     global string
+    global cipherType
     try:
-    	global cipherType
         if cipherType == "Caesar" or cipherType == "":
             caesarDecoded = getCaesarResult(string)
             caesarKey = getCaesarKey(string)
