@@ -7,7 +7,7 @@ app = Tkinter.Tk()
 app.title("CSCipher")
 app.geometry("650x500+200+200")
 
-e = Entry(app, width=100, justify=center).grid(row=1, column=1)
+e = Entry(app, width=100, justify=CENTER).grid(row=1, column=1)
 e.focus_set()
 
 def callback():
