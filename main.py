@@ -40,7 +40,7 @@ def determineMethod():
     elif cipherType is "Auto":
         tkMessageBox.showinfo("Auto","Auto")
     else:
-        tkMessageBox.showinfo("You broke it and idk how","You broke it and idk how")
+        tkMessageBox.showinfo("You broke it and idk how", cipherType)
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
