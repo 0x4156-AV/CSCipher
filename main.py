@@ -86,7 +86,7 @@ submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1,
 
 # Then put down the options for what cipher to use
 relStatus = StringVar()
-relStatus.set("Caesar")
+relStatus.set("Auto")
 Radiobutton(app, text="Caesar", value="Caesar", variable=relStatus, command=beenClicked).grid(row=2, column=0)
 Radiobutton(app, text="Vigenere", value="Vigenere", variable=relStatus, command=beenClicked).grid(row=2, column=1)
 Radiobutton(app, text="Baconian", value="Baconian", variable=relStatus, command=beenClicked).grid(row=2, column=2)
