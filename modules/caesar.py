@@ -1,4 +1,3 @@
-
 import collections
 from string import ascii_lowercase
 
