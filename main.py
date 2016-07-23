@@ -104,6 +104,7 @@ Radiobutton(app, text="Base 64", value="Base 64", variable=relStatus, command=be
 Radiobutton(app, text="Morse", value="Morse", variable=relStatus, command=beenClicked).grid(row=2, column=3)
 Radiobutton(app, text="Auto", value="Auto", variable=relStatus, command=beenClicked).grid(row=2, column=4)
 text = Text(app)
-text.insert(INSERT, "---------------------------------------------------------").grid(row=3,columnspan=4)
+text.insert(INSERT, "---------------------------------------------------------")
+text.grid(row=3,columnspan=4)
 # Start the application
 app.mainloop()
