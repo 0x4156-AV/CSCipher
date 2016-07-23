@@ -29,8 +29,10 @@ def decrypt(n, ciphertext):
 
     return result
 
-def caesar(string):
-	key = str(find_key(string))
+def getCaesarResult(string):
 	decrypted = str(decrypt(find_key(string), string.upper()))
-	textToDisplay = "Used key: " + key + "\n" + decrypted
-	return textToDisplay
+	return decrypted
+	
+def getCaesarKey(string):
+	key = str(find_key(string))
+	return key
