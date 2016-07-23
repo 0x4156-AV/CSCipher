@@ -15,7 +15,7 @@ def callback():
     tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
 
 def beenClicked():
-    cipherType = relStatus.getValue()
+    cipherType = relStatus.get()
     print ciphertype
 
 # Make and put the buttons on a grid on the window
