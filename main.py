@@ -49,9 +49,9 @@ def beenClicked():
     cipherType = relStatus.get()
 
 def determineMethod():
-    global cipherType
     global string
     try:
+    	global cipherType
         if cipherType == "Caesar":
             caesarDecoded = getCaesarResult(string)
             caesarKey = getCaesarKey(string)
@@ -76,8 +76,9 @@ def determineMethod():
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
     #except NameError as noBoxSelected:
-        tkMessageBox.showinfo("Error", "You must select a type of cipher")
-        print noBoxSelected
+        #global cipherType
+        #tkMessageBox.showinfo("Error", "You must select a type of cipher")
+        #print noBoxSelected
         #print "Ciphertext: " + str(cipherType)
     except ZeroDivisionError as noTextEntered:
         tkMessageBox.showinfo("Error", "You must enter something into the text box")
