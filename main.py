@@ -19,28 +19,31 @@ def beenClicked():
 
 def determineMethod():
     global cipherType
-    if cipherType is "Caesar":
-        tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
-    elif cipherType is "Vigenere":
-        tkMessageBox.showinfo("Vigenere","Vigenere")
-    elif cipherType is "Baconian":
-        tkMessageBox.showinfo("Baconian","Baconian")
-    elif cipherType is "Affine":
-        tkMessageBox.showinfo("Affine","Affine")
-    elif cipherType is "ROT 13":
-        tkMessageBox.showinfo("ROT 13","ROT 13")
-    elif cipherType is "Binary":
-        tkMessageBox.showinfo("Binary","Binary")
-    elif cipherType is "Atbash":
-        tkMessageBox.showinfo("Atbash","Atbash")
-    elif cipherType is "Base 64":
-        tkMessageBox.showinfo("Base 64","Base 64")
-    elif cipherType is "Morse":
-        tkMessageBox.showinfo("Morse","Morse")
-    elif cipherType is "Auto":
-        tkMessageBox.showinfo("Auto","Auto")
-    else:
-        tkMessageBox.showinfo("You broke it and idk how", cipherType)
+    try:
+        if cipherType is "Caesar":
+            tkMessageBox.showinfo("Caesar Cipher finished",caesar(string))
+        elif cipherType is "Vigenere":
+            tkMessageBox.showinfo("Vigenere","Vigenere")
+        elif cipherType is "Baconian":
+            tkMessageBox.showinfo("Baconian","Baconian")
+        elif cipherType is "Affine":
+            tkMessageBox.showinfo("Affine","Affine")
+        elif cipherType is "ROT 13":
+            tkMessageBox.showinfo("ROT 13","ROT 13")
+        elif cipherType is "Binary":
+            tkMessageBox.showinfo("Binary","Binary")
+        elif cipherType is "Atbash":
+            tkMessageBox.showinfo("Atbash","Atbash")
+        elif cipherType is "Base 64":
+            tkMessageBox.showinfo("Base 64","Base 64")
+        elif cipherType is "Morse":
+            tkMessageBox.showinfo("Morse","Morse")
+        elif cipherType is "Auto":
+            tkMessageBox.showinfo("Auto","Auto")
+        else:
+            tkMessageBox.showinfo("You broke it and idk how", cipherType)
+    except NameError as e:
+        tkMessageBox.showinfo("Error", "You must select a type of cipher")
 # Make and put the buttons on a grid on the window
 # Start with the textBox and Submit Button
 labelText = StringVar(None)
