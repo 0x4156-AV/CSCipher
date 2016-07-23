@@ -10,7 +10,7 @@ app.title("CSCipher")
 app.geometry("660x500+200+200")
 
 # Create the menu bar
-makeMenubar()
+makeMenuBar()
 
 # Create the funtions to call from the GUI
 def callback():
