@@ -76,6 +76,7 @@ def determineMethod():
         else:
             tkMessageBox.showinfo("You broke it and idk how", cipherType)
     except NameError as noBoxSelected:
+    	global cipherType
         cipherType == "Caesar"
         determineMethod()
     except ZeroDivisionError as noTextEntered:
