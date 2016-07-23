@@ -5,6 +5,10 @@ from caesar import caesar
 app = Tkinter.Tk()
 app.title("CSCipher")
 app.geometry("650x500+200+200")
+
+custName = StringVar(None) 
+yourname = Entry(app, textvariable=custName).pack()
+
 app.mainloop()
 
 #flagFormat = input("How are flags formatted for this CTF? (ex. flag{}) ")
