@@ -12,9 +12,9 @@ e.pack()
 e.focus_set()
 
 def callback():
-    print e.get()
+    string e.get()
 
-b = Button(app, text="Start", width=10, command=callback)
+b = Button(app, text="Start", width=100, command=callback)
 b.pack()
 
 app.mainloop()
