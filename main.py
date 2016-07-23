@@ -19,7 +19,7 @@ def About():
 menubar = Menu(app)
 
 filemenu = Menu(menubar, tearoff=0)
-filemenu.add_command(label="Open", accelerator="Ctrl+O", accelerator="Command+O", command=Open)
+filemenu.add_command(label="Open", accelerator="Ctrl+O", command=Open)
 filemenu.add_command(label="Save", accelerator="Ctrl+S", command=Save)
 filemenu.add_separator()
 filemenu.add_command(label="Exit", accelerator="Ctrl+Q", command=app.quit)
