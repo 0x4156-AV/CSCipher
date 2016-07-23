@@ -20,8 +20,8 @@ def beenClicked():
 
 # Make and put the buttons on a grid on the window
 labelText = StringVar(None)
-textEntry = Entry(app, width=57, justify=CENTER, textvariable=labelText).grid(row=1, column=1)
-submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1, column=2)
+textEntry = Entry(app, width=10, justify=CENTER, textvariable=labelText,columnspan=4).grid(row=1, column=1)
+submitButton = Button(app, text="Start", width=10, command=callback).grid(row=1, column=5)
 relStatus = StringVar().set("Auto")
 radiobutton = Radiobutton(app, text="Caesar", value="Caesar", variable=relStatus, command=beenClicked, width=5).grid(row=2, column=1)
 radiobutton = Radiobutton(app, text="Vigenere", value="Vigenere", variable=relStatus, command=beenClicked).grid(row=2, column=2)
