@@ -20,6 +20,6 @@ CSCipher uses Pyhton 2.7 **not** Python 3.5 so if you don't already have that in
 ```bash
 git clone -b master https://github.com/AaronVigal/CSCipher.git
 cd CSCipher
-pip install -r requirements.txt
-python main.py
+pip3 install -r requirements.txt
+python3 main.py
 ```
