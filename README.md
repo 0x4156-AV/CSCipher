@@ -9,7 +9,7 @@ Created by [Aaron Vigal] (www.aaronvigal.com) on Saturday, July 23rd, 2016 for M
 * Affine
 * Atbash
 * Baconian
-* Base 64
+* Base 64/32/16
 * Binary
 * Caesarian Shift
 * Morse Code
