@@ -8,12 +8,12 @@ Created by [Aaron Vigal] (www.aaronvigal.com) on Saturday, July 23rd, 2016 for M
 ----------------------------------------
 * Affine
 * Atbash
-* Baconian
+* Baconian✅
 * Base 64/32/16 ✅
 * Binary ✅
 * Caesarian Shift ✅
-* Morse Code 
-* ROT13
+* Morse Code ✅
+* ROT13✅
 * Vigenére Cipher
 
 CSCipher uses Pyhton 2.7 **not** Python 3.5 so if you don't already have that installed, install that from [here] (https://www.python.org/downloads/). To install the required dependencies and start up the application, execute the following commands in your terminal:
