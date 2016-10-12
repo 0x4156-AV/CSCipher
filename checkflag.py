@@ -10,7 +10,7 @@ class checkFlag():
         flag_format += "{"
         print(flag_format)
 
-    def check(string):
+    def check(self,string):
         if(string.contains(self.flag_format)):
             print("Flag: " + string)
             sys.exit(0)
