@@ -1,6 +1,7 @@
 class Caesar:
     outcomes = []
     def caesar(self, message):
+        message = message.upper()
         LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         for key in range(len(LETTERS)):
             translated = ''
@@ -14,4 +15,6 @@ class Caesar:
                 else:
                     translated = translated + symbol
             self.outcomes.append(translated)
+
+    def get_results(self):
         return self.outcomes
