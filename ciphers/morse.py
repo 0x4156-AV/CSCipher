@@ -1,6 +1,6 @@
 class Morse:
     def morse(self, ciphertext):
-        keepGing = True
+        keepGoing = True
         for i in range(len(ciphertext)):
             if(ciphertext[i] is "-" or ciphertext[i] is "." or ciphertext[i] is " "):
                 keepGoing = True
@@ -23,5 +23,8 @@ class Morse:
                     '9': '----.'
                     }
             CODE_REVERSED = {value:key for key,value in CODE.items()}
-            thing = ''.join(CODE_REVERSED.get(i) for i in ciphertext.split())
-            return thing
+            try:
+                thing = ''.join(CODE_REVERSED.get(i) for i in ciphertext.split())
+                return thing
+            except(TypeError):
+                pass
