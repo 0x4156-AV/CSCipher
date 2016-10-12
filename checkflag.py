@@ -7,7 +7,6 @@ class checkFlag():
         for i in ask_format:
             if i in accepted:
                 self.flag_format += i
-        self.flag_format += "{"
 
     def check(self,string):
         if(string) == None:
