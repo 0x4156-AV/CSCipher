@@ -1,8 +1,8 @@
-import checkflag
-from ciphers.caesar import Caesar
+from checkflag import *
 from ciphers.bases import *
+from ciphers.caesar import Caesar
 message = "MFRGG"
-flagFormat = checkflag()
+flagFormat = checkFlag()
 caesar = Caesar()
 bases = Bases()
 print(caesar.caesar(message))
