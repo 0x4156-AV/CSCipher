@@ -1,16 +1,23 @@
 import sys
 class checkFlag():
+    flag_format="";
     def __init__(self):
         ask_format = input("What is the format of your flags? ").upper()
         accepted = "ABCDEFGHIJKLMNOPQRSTVWXYZ"
-        flag_format = ""
         for i in ask_format:
             if i in accepted:
-                flag_format += i
-        flag_format += "{"
-        print(flag_format)
+                self.flag_format += i
+        self.flag_format += "{"
 
     def check(self,string):
-        if(string.contains(self.flag_format)):
+        if(string) == None:
+            pass
+        elif(self.flag_format in string):
             print("Flag: " + string)
             sys.exit(0)
+
+    def check_array(self,array):
+        for i in range(len(array)):
+            if(self.flag_format in array[i]):
+                print("Flag: " + array[i])
+                sys.exit(0)
